@@ -1,0 +1,9 @@
+services:
+  ml-api:
+    build: .
+    image: docker-ml-api:v1
+    environment:
+      MODEL_VERSION: v1
+    ports:
+      - "8000:8000"
+
