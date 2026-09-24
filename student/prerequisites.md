@@ -31,7 +31,8 @@ You must also have:
 1. Create an account at <https://hub.docker.com/>.
 2. Verify your email address.
 3. Record your Docker Hub username.
-4. Sign in from a terminal:
+4. After installing Docker Desktop or Docker Engine in the appropriate setup
+   section below, start Docker and sign in from a terminal:
 
    ```text
    docker login
@@ -64,6 +65,10 @@ written as **kind**, meaning **Kubernetes IN Docker**.
 ## 4. Windows setup
 
 ### 4.1 Enable WSL 2
+
+> **Note:** Installing WSL 2 can take several minutes, depending on the
+> computer and internet connection, and normally requires a restart. Complete
+> this step well before the workshop.
 
 Open **PowerShell as Administrator** and run:
 
