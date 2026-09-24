@@ -58,6 +58,12 @@ docker build -t docker-ml-api:v1 .\sample-app
 docker images docker-ml-api
 ```
 
+For an offline build, use the offline Dockerfile:
+
+```powershell
+docker build -f .\sample-app\Dockerfile.offline -t docker-ml-api:v1 .\sample-app
+```
+
 ## Lab 3 — Run and inspect the container
 
 First run the intentionally incomplete command:
@@ -147,6 +153,12 @@ kubectl logs deployment/ml-api
 ```powershell
 kubectl apply -f .\kubernetes\service.yaml
 kubectl get service ml-api
+```
+
+Alternatively, start a temporary port forward:
+
+```powershell
+kubectl port-forward service/ml-api 8080:8000
 ```
 
 The workshop kind cluster maps NodePort `30080` to host port `8080`. Test:
